@@ -1,0 +1,20 @@
+create database P17;
+use P17;
+
+CREATE TABLE IF NOT EXISTS Student_Mentor (
+    studRollNo VARCHAR(10) PRIMARY KEY,
+    studClass VARCHAR(20) NOT NULL,
+    studName VARCHAR(255) NOT NULL,
+    studContact VARCHAR(15) NOT NULL,
+    MentorName VARCHAR(255) NOT NULL,
+    issuesDiscussed TEXT,
+    meetingDate DATE NOT NULL
+);
+
+-- Inserting sample data
+INSERT INTO Student_Mentor VALUES
+    ('S001', 'Class A', 'John Doe', '123-456-7890', 'Mentor A', 'Absent', '2023-11-15'),
+    -- Add more records as needed
+    ('S002', 'Class B', 'Jane Smith', '987-654-3210', 'Mentor B', 'Present', '2023-11-15');
+    
+select * from Student_Mentor;    
